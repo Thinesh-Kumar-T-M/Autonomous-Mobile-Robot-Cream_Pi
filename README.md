@@ -26,7 +26,7 @@ Now build your workspace :
 cd ..
 catkin_make
 ```
-You should have these 3 packages in your *src* folder.
+You should have these 3 packages in your **_catkin_ws/src/Autonomous-Mobile-Robot-Cream_Pi/_**  folder.
 ![cream_pi_packages](https://github.com/Thinesh-Kumar-T-M/Autonomous-Mobile-Robot-Cream_Pi/assets/82699150/d3120b00-9008-4db0-a8de-e073056aa680)
 
 
