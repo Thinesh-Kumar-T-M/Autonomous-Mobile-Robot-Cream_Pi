@@ -18,7 +18,7 @@ Clone the repository into your ROS workspace.
 cd ~/caktin_ws/src
 git clone https://github.com/Thinesh-Kumar-T-M/Autonomous-Mobile-Robot-Cream_Pi
 ```
-Now source your workspace :
+Now build your workspace :
 ```
 cd ..
 catkin_make
