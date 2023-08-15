@@ -24,7 +24,7 @@ cd ..
 catkin_make
 ```
 ### Step 2:
-Deploy the AMR with the an pre-built environment(in this case a house environment in Gazebo) by launching the **cream_pi_house.launch**
+Deploy the AMR with a pre-built environment (in this case a _house environment in Gazebo_) by launching the **cream_pi_house.launch**
 ```
 roslaunch cream_pi_gazebo cream_pi_house.launch
 ```
