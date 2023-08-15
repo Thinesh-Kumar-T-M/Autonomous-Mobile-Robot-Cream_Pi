@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+	<param command="$(find xacro)/xacro $(find cream_pi)/urdf/cream_pi.xacro" name="robot_description"/>
+
+	<node args="-param robot_description -urdf -model cream_pi" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="paused" value="false"/>
+		<arg name="use_sim_time" value="true"/>
+		<arg name="gui" value="true"/>
+		<arg name="headless" value="false"/>
+		<arg name="debug" value="false"/>
+	</include>
+	
+	<arg default="$(find cream_pi)/urdf/cream_pi.xacro" name="model"/>
+  	<arg default="false" name="gui"/>
+  	<arg default="$(find cream_pi)/rviz/urdf.rviz" name="rvizconfig"/>
+
+  <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
+  
+  <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
+
+</launch>
