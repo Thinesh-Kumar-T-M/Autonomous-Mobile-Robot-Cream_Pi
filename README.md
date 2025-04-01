@@ -12,6 +12,7 @@ Let's get started...🏃‍♂️
   <li>Ubuntu 20.04 Operating System</li>
   <li>ROS1 </li>
   <li>Gazebo </li>
+  <li>ROS Navigation stack </li>
 </ul>
 
 ## Simulation of a fully autonomous mobile robot using Gazebo, ROS and RViz. </h2>
